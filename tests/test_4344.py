@@ -3,8 +3,9 @@ from unittest import mock, TestCase
 import io
 import sys
 from contextlib import contextmanager
-from Baekjun.answer.answer_4344 import main, parse_input_string
-from Baekjun.answer.answer_4344 import calculate_ratio, convert_float_to_string_format
+sys.path.append("../")
+from answer.answer_4344 import main, parse_input_string
+from answer.answer_4344 import calculate_ratio, convert_float_to_string_format
 
 
 class Problem4344SimpleTest(TestCase):
@@ -83,7 +84,7 @@ class Problem4344SimpleTest(TestCase):
 
         self.assertEqual(test_answer, test_output)
 
-    @mock.patch("Baekjun.answer.answer_4344.read_input",create=True)
+    @mock.patch("answer.answer_4344.read_input",create=True)
     def test_main(self,mock_readline):
         mock_readline.side_effect = [
             "5",
