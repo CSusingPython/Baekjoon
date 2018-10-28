@@ -3,6 +3,7 @@ from unittest import mock, TestCase
 import io
 import sys
 from contextlib import contextmanager
+sys.path.append("../")
 from answer.answer_11051 import main, solve_binomial_coefficient
 
 
